@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: flytodo
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/flytodo_db
+    username: postgres
+    password: hanjihye68
+    driver-class-name: org.postgresql.Driver
+
+  flyway:
+    enabled: true
+    baseline-on-migrate: true
+    locations: classpath:db/migration
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+
